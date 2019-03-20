@@ -3,7 +3,6 @@ html {
 }
 
 body {
-  color: $white;
   font-family: $mainFont;
   font-weight: 300;
   overflow-x: hidden;
@@ -12,7 +11,6 @@ body {
   min-height: 100%;
   display: flex;
   flex-direction: column;
-  background: $black;
   &.noscroll {
     overflow: hidden;
   }
@@ -105,28 +103,24 @@ ul {
   }
 }
 a.btn {
-  border-color: transparent;
-  padding: 15px 25px;
+  border: 2px solid $dark-border-blue;
+  padding: 6px 26px;
   text-align: center;
-  color: $white !important;
-  text-transform: uppercase;
-  height: 51px;
-  max-width: 300px;
+  color: $dark-border-blue;
+  height: 36px;
+  max-width: 173px;
   font-size: 14px;
   font-weight: 500;
-  line-height: 22px;
-  letter-spacing: 0.7px;
   font-family: $mainFont;
   position: relative;
   text-decoration: none;
-  background-color: $text-color;
+  background-color: $white;
   border-radius: 0;
   -webkit-appearance: none;
   -moz-appearance: none;
   &:hover, &:active, &:focus {
     color: $white;
-    background-color: $pink;
-    border-color: transparent;
+    background-color: $dark-border-blue;
     outline: none;
     box-shadow: none;
   }
@@ -150,7 +144,7 @@ input[type='text'], input[type='password'], input[type='email'], input[type='sea
   font-weight: 100;
   max-width: 170px;
   width: 100%;
-  color: $dark-gray;
+  color: $text-gray;
   &:focus {
     outline: none;
   }
@@ -158,7 +152,7 @@ input[type='text'], input[type='password'], input[type='email'], input[type='sea
 
 input[type='text']::-webkit-input-placeholder, input[type='password']::-webkit-input-placeholder, input[type='email']::-webkit-input-placeholder,input[type='search']::-webkit-input-placeholder {
   opacity: 0.5;
-  color: $dark-gray;
+  color: $text-gray;
   font-size: 16px;
 }
 
@@ -167,21 +161,21 @@ input[type='password']::-moz-placeholder,
 input[type='email']::-moz-placeholder,
 input[type='search']::-moz-placeholder {
   opacity: 0.5;
-  color: $dark-gray;
+  color: $text-gray;
   font-size: 16px;
 }
 
 input[type='text']:-moz-placeholder,
 input[type='password']:-moz-placeholder, input[type='email']:-moz-placeholder, input[type='search']:-moz-placeholder {
   opacity: 0.5;
-  color: $dark-gray;
+  color: $text-gray;
   font-size: 16px;
 
 }
 
 input[type='text']:-ms-input-placeholder, input[type='password']:-ms-input-placeholder, input[type='email']:-ms-input-placeholder, input[type='search']:-ms-input-placeholder {
   opacity: 0.5;
-  color: $dark-gray;
+  color: $text-gray;
   font-size: 16px;
 }
 .group-item {

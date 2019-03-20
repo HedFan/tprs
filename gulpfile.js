@@ -15,13 +15,11 @@ var gulp = require('gulp'),
 var custom_path = {
     src: {
         style: 'css/style.scss',
-        templateStyle: 'css/template_styles.scss',
         font: 'css/font/**/*.css'
 
     },
     build: {
         style: 'css/',
-        templateStyle: 'css/',
         font: 'css/'
     },
     watch: {
@@ -79,21 +77,6 @@ gulp.task('style:build', gulp.series(function (done) {
         .pipe(cleanCSS())
         .pipe(sourcemaps.write('.'))
         .pipe(gulp.dest(custom_path.build.style));
-    done();
-}));
-
-gulp.task('templateStyle:build', gulp.series(function (done) {
-    gulp.src(custom_path.src.templateStyle)
-        .pipe(plumber())
-        .pipe(sourcemaps.init())
-        .pipe(sass())
-        .pipe(autoprefixer({
-            browsers: ['last 3 versions', 'ie 9', 'ie 10', 'ie 11'],
-        }))
-        .pipe(gcmq())
-        .pipe(cleanCSS())
-        .pipe(sourcemaps.write('.'))
-        .pipe(gulp.dest(custom_path.build.templateStyle));
     done();
 }));
 
