@@ -9,11 +9,22 @@
     letter-spacing: -0.94px;
     margin-bottom: 40px;
   }
-  img {
-    width: 83%;
-    display: block;
-    margin: auto;
+  ul {
+    display: inline-flex;
+    li {
+      div {
+        height: 160px;
+        display: flex;
+        align-items: center;
+        img {
+          width: 83%;
+          display: block;
+          margin: auto;
+        }
+      }
+    }
   }
+
   span {
     color: $text-color;
     font-size: 12px;

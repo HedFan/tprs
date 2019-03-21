@@ -1,5 +1,8 @@
 .content-item {
   margin-bottom: 150px;
+  @include respond-from(xl) {
+    margin-bottom: 100px;
+  }
   &__text {
 text-align: left;
     margin-right: 20px;
@@ -11,6 +14,11 @@ text-align: left;
     align-items: center;
     margin-left: auto;
     position: relative;
+    overflow: hidden;
+    @include respond-from(xl) {
+      max-width: 300px;
+      max-height: 260px;
+    }
     &:before {
       content: '';
       background-color: rgba(230, 236, 241, 0.11);
@@ -25,7 +33,10 @@ text-align: left;
       height: 100%;
       background-color: mix($bg-light-blue, $dark-blue, $weight:30%);
       opacity: 0.64;
-
+    }
+    img {
+      max-width: max-content;
+      width: auto;
     }
   }
 

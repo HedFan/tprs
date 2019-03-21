@@ -1,6 +1,9 @@
 .menu-list {
   width: 60%;
   margin: 0 auto 70px;
+  @include respond-from(xl) {
+    width: 80%;
+  }
   &__heading {
     font-size: 36px;
     letter-spacing: -1.22px;
