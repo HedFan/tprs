@@ -1,0 +1,24 @@
+.partners-block {
+  margin-bottom: 50px;
+  &__heading {
+    text-align: center;
+    color: $text-color;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 27px;
+    letter-spacing: -0.94px;
+    margin-bottom: 40px;
+  }
+  img {
+    width: 83%;
+    display: block;
+    margin: auto;
+  }
+  span {
+    color: $text-color;
+    font-size: 12px;
+    font-weight: 400;
+    display: block;
+    text-align: center;
+  }
+}

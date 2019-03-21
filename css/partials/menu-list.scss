@@ -1,0 +1,35 @@
+.menu-list {
+  width: 60%;
+  margin: 0 auto 70px;
+  &__heading {
+    font-size: 36px;
+    letter-spacing: -1.22px;
+    line-height: 27px;
+    color: $text-color;
+    margin-bottom: 24px;
+    text-align: center;
+  }
+  &__items {
+    text-align: center;
+    a {
+      margin: 7px 15px;
+      display: inline-block;
+      color: $blue-text;
+      font-size: 20px;
+      letter-spacing: -1.22px;
+      line-height: 27px;
+      border-bottom: 1px dotted $blue-text;
+      &:hover, &:active, &:focus {
+        border-bottom: 0px;
+        text-decoration: none;
+      }
+    }
+    span {
+      font-size: 20px;
+      color: $text-color;
+      letter-spacing: -1.22px;
+      line-height: 27px;
+    }
+
+  }
+}
