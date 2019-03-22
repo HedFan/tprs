@@ -1,0 +1,88 @@
+.accordion-block {
+  .card {
+    border: 0 solid transparent;
+    border-bottom: 1px solid $light-gray;
+    border-radius: 0 !important;
+  }
+
+  &__card-header {
+    background-color: $white;
+    border: 0px solid transparent;
+    padding: 7px 25px;
+    h5 {
+      position: relative;
+      &:before {
+        content: '▼';
+        font-size: 9px;
+        position: absolute;
+        right: 0;
+        top: 22px;
+        color: $dark-blue;
+        z-index: 99;
+      }
+      &.active {
+        &:before {
+          transform: rotate(180deg);
+        }
+      }
+
+      .btn {
+        position: relative;
+        padding-left: 55px;
+        display: block;
+        width: 100%;
+        background-color: transparent;
+        &:focus {
+          box-shadow: none;
+        }
+
+        &:before {
+          content: '';
+          position: absolute;
+          left: 0;
+        }
+        &--fine {
+          &:before {
+            background: url("/image/icons/icon_fine.svg") no-repeat;
+            background-size: 100%;
+            width: 34px;
+            height: 36px;
+          }
+        }
+        &--car {
+          &:before {
+            background: url("/image/icons/icon_car.svg") no-repeat;
+            background-size: 100%;
+            width: 30px;
+            height: 28px;
+          }
+        }
+        &--hummer {
+          &:before {
+            background: url("/image/icons/icon_hummer.svg") no-repeat;
+            background-size: 100%;
+            width: 39px;
+            height: 35px;
+          }
+        }
+        &--tax {
+          &:before {
+            background: url("/image/icons/icon_tax.svg") no-repeat;
+            background-size: 100%;
+            width: 35px;
+            height: 38px;
+          }
+        }
+        &--registry {
+          &:before {
+            background: url("/image/icons/icon_registry.svg") no-repeat;
+            background-size: 100%;
+            width: 34px;
+            height: 38px;
+          }
+        }
+      }
+    }
+
+  }
+}

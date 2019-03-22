@@ -3,6 +3,27 @@
   @include respond-from(xl) {
     margin-bottom: 100px;
   }
+  @include respond-from(lg) {
+    margin-bottom: 80px;
+  }
+  @include respond-from(md) {
+    margin-bottom: 60px;
+  }
+  @include respond-from(sm) {
+    margin-bottom: 40px;
+  }
+  &__heading {
+    color: $text-color;
+    font-size: 21px;
+    font-weight: 400;
+    line-height: 27px;
+    text-align: center;
+    margin-bottom: 30px;
+    @include respond-from(sm) {
+      margin-bottom: 20px;
+    }
+
+  }
   &__text {
 text-align: left;
     margin-right: 20px;
@@ -59,9 +80,25 @@ text-align: left;
     font-weight: 400;
     line-height: 27px;
     margin-bottom: 25px;
+    @include respond-from(md) {
+      margin-bottom: 0;
+      color: $blue;
+      font-size: 18px;
+      font-weight: 400;
+      line-height: 27px;
+      border-bottom: 1px dotted $blue;
+      width: min-content;
+      &:hover, &:active, &:focus {
+        border-bottom: 1px dotted transparent;
+        text-decoration: none;
+      }
+    }
   }
   &__dscr {
     margin-bottom: 50px;
+    @include respond-from(md) {
+      margin-bottom: 25px;
+    }
     p {
       color: $text-color;
       font-size: 15px;
@@ -89,14 +126,24 @@ text-align: left;
         text-decoration: none;
         border-bottom: 0px solid transparent;
       }
+      @include respond-from(md) {
+          font-size: 16px;
+
+      }
       p {
         margin: 15px 0 20px;
         color: $text-color;
         font-size: 15px;
         font-weight: 400;
         line-height: 21px;
+        @include respond-from(md) {
+          font-size: 15px;
+          font-weight: 400;
+          line-height: 21px;
+        }
+
       }
     }
-
   }
 }
+

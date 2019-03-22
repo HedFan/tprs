@@ -7,6 +7,11 @@
   display: flex;
   position: relative;
   margin-bottom: 50px;
+  @include respond-from(sm) {
+    max-height: 213px;
+    background-size: auto;
+    margin-bottom: 30px;
+  }
   &:before {
     content: '';
     background-color: rgba(230, 236, 241, 0.11);
@@ -35,8 +40,34 @@
     line-height: 27px;
     letter-spacing: -0.36px;
     margin-bottom: 20px;
+    @include respond-from(sm) {
+      font-size: 21px;
+      text-align: center;
+    }
   }
   &__form {
     display: flex;
+    position: relative;
+  }
+  &__btn {
+    display: none;
+    @include respond-from(sm) {
+      display: block;
+      border: 0px solid transparent;
+      background-color: transparent;
+      position: absolute;
+      right: 35px;
+      top: 13px;
+      cursor: pointer;
+      &:before {
+        content: '';
+        background: url("/image/icons/icon_search.svg") no-repeat;
+        background-size: 100%;
+        width: 23px;
+        height: 23px;
+        position: absolute;
+
+      }
+    }
   }
 }

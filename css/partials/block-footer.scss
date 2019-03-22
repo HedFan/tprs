@@ -1,11 +1,20 @@
 .block-footer {
   background-color: $bg-gray;
   padding: 40px 35px 35px;
+  @include respond-from(md) {
+    padding: 26px 35px 27px;
+  }
+  @include respond-from(sm) {
+    padding: 25px 25px 20px;
+  }
   &__copirate {
     height: 100%;
     display: flex;
     flex-wrap: wrap;
     align-content: space-between;
+    @include respond-from(md) {
+      text-align: center;
+    }
     p {
       font-size: 15px;
       font-weight: 400;
@@ -13,11 +22,19 @@
       color: $black;
       margin: 0;
       width: 100%;
+      @include respond-from(md) {
+        font-size: 13px;
+        line-height: 15px;
+      }
     }
 
     img {
       width: 79px;
       height: 52px;
+      @include respond-from(md) {
+        display: block;
+        margin: 20px auto 0;
+      }
     }
   }
 
@@ -74,6 +91,9 @@
       display: block;
       &:hover, &:active, &:focus {
         text-decoration: none;
+      }
+      @include respond-from(lg) {
+        font-size: 20px;
       }
     }
 

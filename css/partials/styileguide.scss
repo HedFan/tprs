@@ -103,7 +103,7 @@ ul {
 }
 a.btn {
   border: 2px solid $dark-border-blue;
-  padding: 6px 26px;
+  padding: 6px 22px;
   text-align: center;
   color: $dark-border-blue;
   height: 36px;
@@ -251,24 +251,24 @@ display: block !important;
 
 
   input[type='text']::-webkit-input-placeholder, input[type='password']::-webkit-input-placeholder, input[type='email']::-webkit-input-placeholder,input[type='search']::-webkit-input-placeholder {
-    font-size: 11px;
+    font-size: 15px;
   }
 
   input[type='text']::-moz-placeholder,
   input[type='password']::-moz-placeholder,
   input[type='email']::-moz-placeholder,
   input[type='search']::-moz-placeholder {
-    font-size: 11px;
+    font-size: 15px;
   }
 
   input[type='text']:-moz-placeholder,
   input[type='password']:-moz-placeholder, input[type='email']:-moz-placeholder, input[type='search']:-moz-placeholder {
-    font-size: 11px;
+    font-size: 15px;
 
   }
 
   input[type='text']:-ms-input-placeholder, input[type='password']:-ms-input-placeholder, input[type='email']:-ms-input-placeholder, input[type='search']:-ms-input-placeholder {
-    font-size: 11px;
+    font-size: 15px;
   }
 }
 @media (max-width: 576px) {
@@ -278,9 +278,9 @@ display: block !important;
   h2 {
     font-size: 16px;
   }
-  p {
-    font-size: 11px;
-    line-height: 15px;
+
+  input[type=email], input[type=password], input[type=search], input[type=text] {
+    height: 49px;
   }
 
 }

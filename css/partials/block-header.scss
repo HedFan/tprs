@@ -1,5 +1,8 @@
 .block-header {
   padding: 15px;
+  @include respond-from(sm) {
+    padding: 10px;
+  }
   &__list {
     position: relative;
     color: $dark-blue;
@@ -13,10 +16,18 @@
     ul {
       position: absolute;
       background-color: white;
-      z-index: 99;
-      border: 1px solid black;
-      padding: 7px;
+      z-index: -1;
+      border: 1px solid #0062cc42;
+      padding: 10px;
+      min-width: 192px;
       top: 25px;
+      opacity: 0;
+      transition: all 300ms ease-in-out;
+      &.active {
+        display: block;
+        opacity: 1;
+        z-index: 99;
+      }
       li {
         padding: 5px;
       }
@@ -25,12 +36,70 @@
   }
   &__logo {
     text-align: center;
+    @include respond-from(sm) {
+      text-align: left;
+    }
     img {
       max-width: 293px;
+      @include respond-from(sm) {
+        max-width: 197px;
+      }
     }
   }
   &__btn {
     margin-left: auto;
     display: block;
+  }
+  &__menu {
+    position: relative;
+    text-align: right;
+    margin-right: 15px;
+    display: block;
+    margin-top: -6px;
+
+    span {
+      position: relative;
+      cursor: pointer;
+      &:before {
+        content: '';
+        background: url("/image/icons/menu-icon.png") no-repeat;
+        background-size: 100%;
+        position: absolute;
+        width: 19px;
+        height: 15px;
+      }
+    }
+  }
+}
+.header-menu-mobile {
+  position: absolute;
+  z-index: -1;
+  background: white;
+  padding: 10px 15px;
+  min-width: 210px;
+  width: 100%;
+  right: 0;
+  top: 25px;
+  opacity: 0;
+  border: 1px solid #0062cc42;
+  transition: all 300ms ease-in-out;
+  &.active {
+    display: block;
+    opacity: 1;
+    z-index: 99;
+  }
+  ul {
+    margin-bottom: 0;
+    li {
+      a {
+        display: block;
+        margin-bottom: 8px;
+      }
+      &:last-of-type {
+        a {
+          margin-bottom:0px;
+        }
+      }
+    }
   }
 }

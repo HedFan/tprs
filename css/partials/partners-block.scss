@@ -1,5 +1,8 @@
 .partners-block {
   margin-bottom: 50px;
+  @include respond-from(sm) {
+    margin-bottom: 30px;
+  }
   &__heading {
     text-align: center;
     color: $text-color;
@@ -8,10 +11,20 @@
     line-height: 27px;
     letter-spacing: -0.94px;
     margin-bottom: 40px;
+    @include respond-from(sm) {
+      margin-bottom: 0px;
+    }
   }
   ul {
     display: inline-flex;
+    @include respond-from(md) {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
     li {
+      @include respond-from(md) {
+        width: 50%;
+      }
       div {
         height: 160px;
         display: flex;
@@ -20,6 +33,10 @@
           width: 83%;
           display: block;
           margin: auto;
+          @include respond-from(md) {
+            height: 90px;
+            width: auto;
+          }
         }
       }
     }
@@ -31,5 +48,9 @@
     font-weight: 400;
     display: block;
     text-align: center;
+    @include respond-from(sm) {
+      width: 90%;
+      margin: auto;
+    }
   }
 }
